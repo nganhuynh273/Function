@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài 5</title>
 </head>
+
 <body>
-    <div>bai 5
+    <div>
         <p id="star"></p>
         <h1>star</h1>
         <form name="searchStar">
@@ -16,6 +18,25 @@
             <input type="button" value="search star" onclick="searcHStar()">
             <p id="starhere"></p>
         </form>
-        </div>
+    </div>
+    <script>
+        function searcHStar() {
+            var star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+            var star2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+            stringg = document.forms['searchStar']["star1"].value;
+            searchh = star.indexOf(stringg);
+            for (let i of star) {
+
+                if (searchh != -1) {
+                    document.getElementById('starhere').innerHTML = star2[searchh];
+
+                } else {
+                    document.getElementById('starhere').innerHTML = "Không tìm thấy";
+
+                }
+            }
+        }
+    </script>
 </body>
+
 </html>

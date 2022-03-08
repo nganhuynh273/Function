@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài 2</title>
 </head>
+
 <body>
     <div>
         <label for="AddNum">Type a number</label>
         <input type="number" id="AddNum" oninput="result()" onchange="result()">
         <p id="NumAdded"></p>
     </div>
+    <script>
+        function alertNumber(num) {
+            return Number(num) + 1;
+        }
+
+        function result() {
+            $("#NumAdded").text(
+                alertNumber($().val())
+            );
+        }
+    </script>
 </body>
+
 </html>
