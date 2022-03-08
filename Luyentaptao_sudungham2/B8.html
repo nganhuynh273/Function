@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8</title>
+</head>
+<body>
+ 
+    <input type="text" id="array">Nhập số nguyên<br>
+    <button onclick="lesson8()">Kết quả ở đây</button>
+    <p id="showArray"></p>
+    <script>
+        function lesson8() {
+    let string = document.getElementById('array').value;
+    let array = [];
+
+    array = string.split('').reverse();
+    document.getElementById('showArray').innerHTML = `Array after repositioning  ${array}`
+}
+
+    </script>
+</body>
+</html>

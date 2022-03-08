@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+
+<body>
+
+    <input type="text" id="smallNumber">Nhập vào 3 số<br>
+    <input type="text" id="smallNumber2"><br>
+    <input type="text" id="smallNumber3"><br>
+    <button onclick="run()">Result</button>
+    <p id="showGTNN"></p>Smallest Value: <br>
+    <script>
+        function run() {
+            let smallNumber = Number(document.getElementById('smallNumber').value);
+            let smallNumber2 = Number(document.getElementById('smallNumber2').value);
+            let smallNumber3 = Number(document.getElementById('smallNumber3').value);
+
+            switch (true) {
+                case smallNumber > smallNumber2 && smallNumber > smallNumber3:
+                    document.getElementById('showGTNN').innerHTML = `Smallest ${smallNumber}`
+                    break;
+                case smallNumber2 > smallNumber && smallNumber2 > smallNumber3:
+                    document.getElementById('showGTNN').innerHTML = `Smallest ${smallNumber2}`
+                    break;
+                case smallNumber3 > smallNumber2 && smallNumber3 > smallNumber2:
+                    document.getElementById('showGTNN').innerHTML = `Smallest ${smallNumber3}`
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

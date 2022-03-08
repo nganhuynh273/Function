@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 9</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="character">
+        <button type="button" onclick="addToArray()">
+            Add to Arraty
+        </button>
+    </div>
+    <div>
+        <input type="text" name="id" id="word">
+        <button type="button" onclick="checkExistArray()">
+            Check value exist array</button>
+    </div>
+    <div>
+        <div id="array"></div>
+    </div>
+    <script>
+        function addToArray() {
+            let character = document.getElementById("character").value;
+            let str = `<p>${character}</p>`;
+            document.getElmentbyId('array').innerHTML += str;
+        }
+    </script>
+</body>
+
+</html>
